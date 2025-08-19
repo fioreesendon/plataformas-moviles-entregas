@@ -1,4 +1,4 @@
-7<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
   <head>
     <meta charset="UTF-8">
@@ -19,16 +19,16 @@
 
       .navbar-custom .nav-link,
       .navbar-custom .navbar-brand {
-        color: black; /* Texto en negro */
+        color: black; 
       }
 
       .navbar-custom .nav-link:hover {
-        color: #FFD700; /* Amarillo al pasar el mouse */
+        color: #FFD700; /* Amarillo */
       }
 
-      /* Icono del menú hamburguesa en negro */
+      /* Icono hamburguesa negro */
       .navbar-toggler {
-        border: none; /* sin borde */
+        border: none;
       }
       .navbar-toggler-icon {
         background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' 
@@ -36,10 +36,20 @@
         stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
       }
 
-      /* Hacer que el menú abierto ocupe solo 1/4 de la pantalla */
+      /* Estilo del collapse como sidebar */
       .navbar-collapse {
-        flex-basis: 25% !important; /* ancho del menú */
-        max-width: 25%; 
+        position: fixed;   /* lo fijamos */
+        top: 56px;         /* debajo de la navbar */
+        left: 0;
+        height: 100%;
+        width: 25%;        /* solo un cuarto */
+        background-color: #FDECDA; /* igual al menú */
+        padding: 1rem;
+      }
+
+      /* Que los links se vean en columna */
+      .navbar-nav {
+        flex-direction: column;
       }
     </style>
   </head>
@@ -47,8 +57,8 @@
     <h1 class="text-center mt-3">Trabajos Prácticos</h1>
     <p class="text-center">Listado de trabajos prácticos para la materia Plataformas Móviles</p>
 
-    <!-- Navbar de Bootstrap con tus links -->
-    <nav class="navbar navbar-expand-lg navbar-custom">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
       <a class="navbar-brand" href="#">Menu</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -56,7 +66,7 @@
       </button>
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav flex-column"> <!-- en columna -->
+        <ul class="navbar-nav">
           <li class="nav-item"><a class="nav-link" href="tp-1/index.html">Primer Trabajo</a></li>
           <li class="nav-item"><a class="nav-link" href="tp-2/index.html">Segundo Trabajo</a></li>
           <li class="nav-item"><a class="nav-link" href="tp-3/index.html">Tercer Trabajo</a></li>
@@ -66,7 +76,7 @@
       </div>
     </nav>
 
-    <!-- Bootstrap JS (jQuery + Popper + Bootstrap) -->
+    <!-- Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
   </body>
