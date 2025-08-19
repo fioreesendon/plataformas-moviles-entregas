@@ -14,7 +14,7 @@
 
       /* Navbar personalizado */
       .navbar-custom {
-        background-color: #FDECDA; /* Color del menú (igual que antes) */
+        background-color: #FDECDA; /* Color del menú */
       }
 
       .navbar-custom .nav-link,
@@ -26,19 +26,36 @@
         color: #FFD700; /* Amarillo al pasar el mouse */
       }
 
-      /* Icono del menú hamburguesa en negro */
+      /* Icono del menú hamburguesa en negro (forzado) */
       .navbar-toggler {
-        border: none; /* sin borde */
+        border: none;
       }
       .navbar-toggler-icon {
-        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' 
-        xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='black' stroke-width='2' 
-        stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+        background-image: none !important; /* borra el ícono default de Bootstrap */
+        width: 30px;
+        height: 2px;
+        background-color: black; /* línea negra */
+        position: relative;
+      }
+      .navbar-toggler-icon::before,
+      .navbar-toggler-icon::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        width: 30px;
+        height: 2px;
+        background-color: black; /* líneas negras */
+      }
+      .navbar-toggler-icon::before {
+        top: -8px;
+      }
+      .navbar-toggler-icon::after {
+        top: 8px;
       }
 
       /* Hacer que el menú abierto ocupe solo 1/4 de la pantalla */
       .navbar-collapse {
-        flex-basis: 25% !important; /* ancho del menú */
+        flex-basis: 25% !important;
         max-width: 25%; 
       }
     </style>
@@ -56,7 +73,7 @@
       </button>
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav flex-column"> <!-- en columna -->
+        <ul class="navbar-nav flex-column">
           <li class="nav-item"><a class="nav-link" href="tp-1/index.html">Primer Trabajo</a></li>
           <li class="nav-item"><a class="nav-link" href="tp-2/index.html">Segundo Trabajo</a></li>
           <li class="nav-item"><a class="nav-link" href="tp-3/index.html">Tercer Trabajo</a></li>
@@ -66,7 +83,7 @@
       </div>
     </nav>
 
-    <!-- Bootstrap JS (jQuery + Popper + Bootstrap) -->
+    <!-- Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
   </body>
