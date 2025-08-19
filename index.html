@@ -26,7 +26,7 @@
         color: #FFD700; /* Amarillo al pasar el mouse */
       }
 
-      /* Icono del menú hamburguesa en negro (forzado) */
+      /* Icono del menú hamburguesa en negro */
       .navbar-toggler {
         border: none;
       }
@@ -53,10 +53,21 @@
         top: 8px;
       }
 
-      /* Hacer que el menú abierto ocupe solo el 15% de la pantalla */
+      /* Menú desplegable estilo sidebar al 15% */
       .navbar-collapse {
-        flex-basis: 15% !important;
-        max-width: 15%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 15%; /* solo ocupa el 15% de la pantalla */
+        background-color: #FDECDA; /* mismo color del navbar */
+        padding-top: 60px; /* baja un poco para que no tape el header */
+        transition: transform 0.3s ease;
+        transform: translateX(-100%); /* oculto por defecto */
+      }
+
+      .navbar-collapse.show {
+        transform: translateX(0); /* cuando se abre, aparece */
       }
     </style>
   </head>
@@ -64,7 +75,7 @@
     <h1 class="text-center mt-3">Trabajos Prácticos</h1>
     <p class="text-center">Listado de trabajos prácticos para la materia Plataformas Móviles</p>
 
-    <!-- Navbar de Bootstrap con tus links -->
+    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-custom">
       <a class="navbar-brand" href="#">Menu</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -82,13 +93,6 @@
         </ul>
       </div>
     </nav>
-
-    <!-- Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
-  </body>
-</html>
-
 
     <!-- Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
