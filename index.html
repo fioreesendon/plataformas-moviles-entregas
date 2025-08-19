@@ -1,4 +1,4 @@
-d<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
   <head>
     <meta charset="UTF-8">
@@ -14,12 +14,12 @@ d<!DOCTYPE html>
 
       /* Navbar personalizado */
       .navbar-custom {
-        background-color: #000000; /* Negro */
+        background-color: #FDECDA; /* Color del menú (igual que antes) */
       }
 
       .navbar-custom .nav-link,
       .navbar-custom .navbar-brand {
-        color: white; /* Texto en blanco */
+        color: black; /* Texto en negro */
       }
 
       .navbar-custom .nav-link:hover {
@@ -28,7 +28,7 @@ d<!DOCTYPE html>
 
       /* Icono del menú hamburguesa en negro */
       .navbar-toggler {
-        border: none;
+        border: none; /* sin borde */
       }
       .navbar-toggler-icon {
         background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' 
@@ -38,8 +38,8 @@ d<!DOCTYPE html>
 
       /* Hacer que el menú abierto ocupe solo 1/4 de la pantalla */
       .navbar-collapse {
-        flex-basis: 25% !important;
-        max-width: 25%;
+        flex-basis: 25% !important; /* ancho del menú */
+        max-width: 25%; 
       }
     </style>
   </head>
@@ -47,7 +47,7 @@ d<!DOCTYPE html>
     <h1 class="text-center mt-3">Trabajos Prácticos</h1>
     <p class="text-center">Listado de trabajos prácticos para la materia Plataformas Móviles</p>
 
-    <!-- Navbar -->
+    <!-- Navbar de Bootstrap con tus links -->
     <nav class="navbar navbar-expand-lg navbar-custom">
       <a class="navbar-brand" href="#">Menu</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -56,7 +56,7 @@ d<!DOCTYPE html>
       </button>
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav flex-column">
+        <ul class="navbar-nav flex-column"> <!-- en columna -->
           <li class="nav-item"><a class="nav-link" href="tp-1/index.html">Primer Trabajo</a></li>
           <li class="nav-item"><a class="nav-link" href="tp-2/index.html">Segundo Trabajo</a></li>
           <li class="nav-item"><a class="nav-link" href="tp-3/index.html">Tercer Trabajo</a></li>
@@ -66,9 +66,8 @@ d<!DOCTYPE html>
       </div>
     </nav>
 
-    <!-- Bootstrap JS -->
+    <!-- Bootstrap JS (jQuery + Popper + Bootstrap) -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
-
